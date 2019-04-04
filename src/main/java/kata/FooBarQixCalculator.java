@@ -4,13 +4,17 @@ public class FooBarQixCalculator {
 
 
     public String calculateFooBarQix(int number) {
+        StringBuilder result = new StringBuilder();
         if(number % 3  == 0){
-            return "Foo";
+            result.append("Foo");
         }
         if(String.valueOf(number).contains("3")){
-            return "Foo";
+            result.append("Foo");
         }
-        return String.valueOf(number);
+        if(result.length()==0){
+            result.append(String.valueOf(number));
+        }
+        return result.toString();
     }
 
 }

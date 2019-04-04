@@ -21,12 +21,17 @@ public class FooBarQixCalculatorTest {
 
     @Test
     public void should_return_foo_when_divisible() {
-        Assert.assertEquals("Foo",fooBarQixCalculator.calculateFooBarQix(6));
+        Assert.assertEquals("Foo", fooBarQixCalculator.calculateFooBarQix(6));
     }
 
     @Test
-    public void should_return_foo_when_contains(){
-        Assert.assertEquals("Foo",fooBarQixCalculator.calculateFooBarQix(13));
+    public void should_return_foo_when_contains() {
+        Assert.assertEquals("Foo", fooBarQixCalculator.calculateFooBarQix(13));
+    }
+
+    @Test
+    public void should_return_foofoo_when_divisible_and_contains() {
+        Assert.assertEquals("FooFoo", fooBarQixCalculator.calculateFooBarQix(3));
     }
 
 
