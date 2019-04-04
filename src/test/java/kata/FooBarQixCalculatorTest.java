@@ -24,5 +24,10 @@ public class FooBarQixCalculatorTest {
         Assert.assertEquals("Foo",fooBarQixCalculator.calculateFooBarQix(6));
     }
 
+    @Test
+    public void should_return_foo_when_contains(){
+        Assert.assertEquals("Foo",fooBarQixCalculator.calculateFooBarQix(13));
+    }
+
 
 }
