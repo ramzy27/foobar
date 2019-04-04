@@ -19,5 +19,10 @@ public class FooBarQixCalculatorTest {
         Assert.assertEquals("1", fooBarQixCalculator.calculateFooBarQix(1));
     }
 
+    @Test
+    public void should_return_foo_when_divisible() {
+        Assert.assertEquals("Foo",fooBarQixCalculator.calculateFooBarQix(6));
+    }
+
 
 }
