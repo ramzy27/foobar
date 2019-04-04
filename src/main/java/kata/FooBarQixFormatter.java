@@ -1,9 +1,9 @@
 package kata;
 
-public class FooBarQixCalculator {
+public class FooBarQixFormatter {
 
 
-    public String calculateFooBarQix(int number) {
+    public String formatFooBarQix(int number) {
         StringBuilder result = new StringBuilder();
         applyDivisors(number, result);
         applyContains(number, result);
@@ -12,12 +12,10 @@ public class FooBarQixCalculator {
 
 
     private void applyDivisors(int number, StringBuilder result) {
-        if (number % 3 == 0) {
-            result.append("Foo");
-        }
-        if (number % 5 == 0) {
-            result.append("Bar");
-        }
+        for (Divisors divisorEnum : Divisors.values())
+            if (number % divisorEnum.getValue() == 0) {
+                result.append(divisorEnum.getDisplayValue());
+            }
     }
 
     private void applyContains(int number, StringBuilder result) {
