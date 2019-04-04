@@ -7,6 +7,9 @@ public class FooBarQixFormatter {
         StringBuilder result = new StringBuilder();
         applyDivisors(number, result);
         applyContains(number, result);
+        if (result.length() == 0) {
+            result.append(String.valueOf(number));
+        }
         return result.toString();
     }
 
@@ -19,20 +22,15 @@ public class FooBarQixFormatter {
     }
 
     private void applyContains(int number, StringBuilder result) {
-        if (String.valueOf(number).contains("3")) {
-            result.append("Foo");
-        }
-
-        if (String.valueOf(number).contains("5")) {
-            result.append("Bar");
-        }
-
-        if (String.valueOf(number).contains("7")) {
-            result.append("Qix");
-        }
-        if (result.length() == 0) {
-            result.append(String.valueOf(number));
+        String stringNumber = String.valueOf(number);
+        for (char c : stringNumber.toCharArray()) {
+            for (Containables containsEnum : Containables.values()) {
+                if (c == containsEnum.getValue()) {
+                    result.append(containsEnum.getDisplayValue());
+                }
+            }
         }
     }
 
 }
+

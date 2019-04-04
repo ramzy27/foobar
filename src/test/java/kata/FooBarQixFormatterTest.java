@@ -57,4 +57,9 @@ public class FooBarQixFormatterTest {
         Assert.assertEquals("FooBar",fooBarQixCalculator.formatFooBarQix(51));
     }
 
+    @Test
+    public void should_apply_contains_rules(){
+        Assert.assertEquals("BarFoo",fooBarQixCalculator.formatFooBarQix(53));
+    }
+
 }
