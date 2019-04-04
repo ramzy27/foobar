@@ -33,6 +33,21 @@ public class FooBarQixCalculatorTest {
     public void should_return_foofoo_when_divisible_and_contains() {
         Assert.assertEquals("FooFoo", fooBarQixCalculator.calculateFooBarQix(3));
     }
+    @Test
+    public void should_return_bar_when_divisible(){
+        Assert.assertEquals("Bar",fooBarQixCalculator.calculateFooBarQix(20));
+    }
+
+    @Test
+    public void should_return_bar_when_contains(){
+        Assert.assertEquals("Bar",fooBarQixCalculator.calculateFooBarQix(52));
+    }
+
+    @Test
+    public void should_return_barbar_wehndivisible_and_contains(){
+        Assert.assertEquals("BarBar",fooBarQixCalculator.calculateFooBarQix(5));
+    }
+
 
 
 }
