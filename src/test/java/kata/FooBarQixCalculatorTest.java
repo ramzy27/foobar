@@ -48,6 +48,13 @@ public class FooBarQixCalculatorTest {
         Assert.assertEquals("BarBar",fooBarQixCalculator.calculateFooBarQix(5));
     }
 
-
+    @Test
+    public void should_return_qix(){
+        Assert.assertEquals("Qix",fooBarQixCalculator.calculateFooBarQix(7));
+    }
+    @Test
+    public void should_apply_division_rules(){
+        Assert.assertEquals("FooBar",fooBarQixCalculator.calculateFooBarQix(51));
+    }
 
 }
